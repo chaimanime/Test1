@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<div>
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<div>
+{{ form_label(form.codeP, "Code de la produit") }}
+{{ form_errors(form.codeP) }}
+<div>
+{{ form_widget(form.codeP) }}
+</div>
+</div>
+<div>
+{{ form_label(form.designation, "Designation de la produit") }}
+{{ form_errors(form.designation) }}
+<div>
+{{ form_widget(form.designation) }}
+</div>
+</div>
+<div>
+{{ form_label(form.prixht, "Prixde la produit") }}
+{{ form_errors(form.prixht) }}
+<div>
+{{ form_widget(form.prixht) }}
+</div>
+</div>
+<div>
+{{ form_label(form.qte, "Quantitede la produit") }}
+{{ form_errors(form.qte) }}
+<div>
+{{ form_widget(form.qte) }}
+</div>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary">Ajouter</button>
+</div>
+<div>
+{{ form_rest(form) }}
+</div>
+{{ form_end(form) }}
+</div>
+{% endblock %}
